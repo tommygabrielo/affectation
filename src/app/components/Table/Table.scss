@@ -1,0 +1,104 @@
+.table {
+  &.hidden {
+    visibility: hidden;
+  }
+
+  margin: 8px 4px;
+  border-top: none;
+  width: fit-content;
+  .cell, .label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 38px;
+    height: 30px;
+    border: 1px solid #cccccc00;
+  }
+
+  .cell {
+    border: 1px solid #ccc;
+    &.framed {
+      border: 1px solid blue;
+      color: blue;
+    }
+
+    &.crossed {
+      background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('../../../assets/close.png');
+      background-size: 32px;
+      background-position-y: center;
+      background-position-x: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      .input-cell {
+        background: initial;
+      }
+    }
+
+    &.marked {
+      background-color: rgb(43, 206, 43);
+      .input-cell {
+        background-color: rgb(43, 206, 43);
+      }
+    }
+
+    .input-cell {
+      text-align: center;
+      width: 24px;
+      border: none;
+      outline: none;
+      &:read-only {
+        cursor: default;
+      }
+    }
+  }
+
+  .label {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .labelX {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content-labelY {
+    display: flex;
+    flex-direction: row;
+    .matrix-container {
+      .line {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  .markedX, .markedY {
+    .cell {
+      border: 1px solid transparent;
+    }
+  }
+
+  .markedX {
+    display: flex;
+    flex-direction: row;
+    .cell {
+      border-right: none;
+      width: 28px;
+    }
+  }
+
+  .markedY {
+    display: flex;
+    flex-direction: column;
+    .line {
+      display: flex;
+      flex-direction: row;
+    }
+    .cell {
+      border-bottom: none;
+      height: 28px;
+    }
+  }
+}

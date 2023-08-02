@@ -1,0 +1,51 @@
+.outputs-container {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // position: fixed;
+    height: 40px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding-left: 24px;
+  }
+
+  .content {
+    margin-top: 40px;
+    padding: 12px 0px;
+    padding-left: 24px;
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .table {
+        margin-right: 24px;
+      }
+    }
+
+    .graph-container {
+      width: fit-content;
+      margin: 24px auto;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+.svg-path {
+  cursor: pointer;
+
+  &:hover {
+    path {
+      stroke: black;
+    }
+
+    text {
+      fill: black;
+    }
+  }
+}
